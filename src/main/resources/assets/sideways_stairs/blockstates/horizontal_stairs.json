@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=ne": { "model": "sideways_stairs:block/horizontal_stairs" },
+    "facing=se": { "model": "sideways_stairs:block/horizontal_stairs", "y": 90 },
+    "facing=sw": { "model": "sideways_stairs:block/horizontal_stairs", "y": 180 },
+    "facing=nw": { "model": "sideways_stairs:block/horizontal_stairs", "y": 270 }
+  }
+}

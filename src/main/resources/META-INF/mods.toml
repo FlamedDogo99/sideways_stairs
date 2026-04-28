@@ -1,0 +1,26 @@
+modLoader="javafml"
+loaderVersion="[36,)"
+license="All rights reserved"
+
+[[dependencies.sideways_stairs]]
+    modId="forge"
+    mandatory=true
+    versionRange="[36.2.34,)"
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.sideways_stairs]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.16.5,1.17)"
+    ordering="NONE"
+    side="BOTH"
+
+[[mods]]
+modId="sideways_stairs"
+version="0.1.0"
+displayName="Sideways stairs"
+description='''
+Adds sideways stairs for every stair.
+Made by FlamedDogo99
+'''
