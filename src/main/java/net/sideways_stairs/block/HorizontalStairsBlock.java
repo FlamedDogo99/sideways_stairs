@@ -15,6 +15,7 @@ import net.minecraft.state.EnumProperty;
 import net.minecraft.state.StateContainer;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.RayTraceResult;
 import net.minecraft.util.math.shapes.ISelectionContext;
 import net.minecraft.util.math.shapes.VoxelShape;
 import net.minecraft.util.math.shapes.VoxelShapes;
@@ -148,6 +149,19 @@ public class HorizontalStairsBlock extends Block {
     @Override
     public TileEntity createTileEntity(BlockState state, IBlockReader world) {
         return new HorizontalStairsTileEntity();
+    }
+
+    @Override
+    @Nonnull
+    public ItemStack getPickBlock(@Nonnull BlockState state, @Nonnull RayTraceResult target, @Nonnull IBlockReader world, @Nonnull BlockPos pos, @Nonnull PlayerEntity player) {
+        HorizontalStairsTileEntity tileEntity = getTE(world, pos);
+        if(tileEntity != null && tileEntity.getSourceId() != null) {
+            HorizontalStairsItem item = ModItems.SOURCE_TO_ITEM.get(tileEntity.getSourceId());
+            if(item != null) {
+                return new ItemStack(item);
+            }
+        }
+        return super.getPickBlock(state, target, world, pos, player);
     }
 
     @Override

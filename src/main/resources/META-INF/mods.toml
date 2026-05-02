@@ -18,7 +18,7 @@ license="All rights reserved"
 
 [[mods]]
 modId="sideways_stairs"
-version="0.1.0"
+version="0.1.1"
 displayName="Sideways stairs"
 description='''
 Adds sideways stairs for every stair.
