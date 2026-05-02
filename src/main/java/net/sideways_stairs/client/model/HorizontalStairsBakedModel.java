@@ -144,6 +144,13 @@ public class HorizontalStairsBakedModel implements IBakedModel {
 
     @Override
     @MethodsReturnNonnullByDefault
+    public TextureAtlasSprite getParticleTexture(@Nonnull IModelData data) {
+        TextureAtlasSprite sprite = resolveSourceSprite(data);
+        return sprite != null ? sprite : geometry.getParticleTexture(data);
+    }
+
+    @Override
+    @MethodsReturnNonnullByDefault
     public ItemCameraTransforms getTransforms() {
         return geometry.getTransforms();
     }
